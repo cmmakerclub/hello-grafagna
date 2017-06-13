@@ -13,13 +13,6 @@ docker run -d --restart always -it  \
 
 # grafana:
 ```
-docker run -d --restart always -it \ 
-  -p 80:3000 \ 
-  --name grafana \ 
-  grafana/grafana
-```
-
-```
 docker run -d --restart always -it \
   -p 80:3000  \
   --name=grafana \
