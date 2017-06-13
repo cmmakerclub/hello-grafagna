@@ -22,3 +22,14 @@ docker run -d --restart always -it \
   -e "GF_INSTALL_PLUGINS=grafana-clock-panel,grafana-simple-json-datasource" \
   grafana/grafana
   ```
+
+
+# telegraf-mqtt
+
+```
+docker run -d --restart always -it \
+    -v $PWD/mqtt-telegraf.conf:/etc/telegraf/telegraf.conf:ro \
+    --net=container:influxdb \
+    --name telegraf-mqtt \
+    telegraf
+```
