@@ -33,3 +33,17 @@ docker run -d --restart always -it \
     --name telegraf-mqtt \
     telegraf
 ```
+
+
+```
+docker run --restart=always  -ti \
+    -v $PWD/emqtt/log:/opt/emqtt/log  \
+    -v $PWD/emqtt/acl.conf:/opt/emqtt/etc/acl.conf  \
+    -v $PWD/emqtt/emq.conf:/opt/emqtt/etc/emq.conf  \
+    --name emq  \
+    -p 18083:18083  \
+    -p 1883:1883  \
+    -p 9001:8083  \
+    -p 8080:8080  \
+    emq:latest
+```
